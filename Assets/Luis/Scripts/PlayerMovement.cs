@@ -30,9 +30,15 @@ public class PlayerMovement : MonoBehaviour
         input = new PlayerInputActions();
 
         //rb.freezeRotation = true;
+    }
+
+    private void Start()
+    {
+        if (isoCamera == null && CameraUtility.Instance != null)
+            isoCamera = CameraUtility.Instance.Camera;
 
         if (isoCamera == null)
-            isoCamera = Camera.main;
+            Debug.LogWarning("PlayerMovement: Could not find a camera.");
     }
 
     private void OnEnable()
