@@ -39,11 +39,13 @@ public class PlayerMovement : MonoBehaviour
     {
         input.Enable();
         input.Player.Dash.performed += ctx => HandleDash();
+        input.Player.LightAttack.performed += ctx => TestHitbox();
     }
     private void OnDisable()
     {
         input.Disable();
         input.Player.Dash.performed -= ctx => HandleDash();
+        input.Player.LightAttack.performed -= ctx => TestHitbox();
     }
 
     private void Update()
@@ -150,6 +152,17 @@ public class PlayerMovement : MonoBehaviour
         }
 
         return last;
+    }
+
+    private void TestHitbox()
+    {
+        HitboxUtility.Instance.CreateHitbox(
+            HitboxUtility.HitboxShape.Cube,
+            transform.position + transform.forward * 2f,
+            Quaternion.identity,
+            Vector3.one,
+            1f
+        );
     }
 
     private void HandleDash()
