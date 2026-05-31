@@ -6,13 +6,13 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Kate/Scenes/SampleScene.unity
+    path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
-    path: Assets/Kate/Scenes/MainMenu.unity
+    path: Assets/Scenes/KateScenes/MainMenu.unity
     guid: 1f107803c77704e30844830da81be139
   - enabled: 1
-    path: Assets/Kate/Scenes/Credits.unity
+    path: Assets/Scenes/KateScenes/Credits.unity
     guid: a838d933ceca14e6bb7af0abc753ac52
   m_configObjects:
     com.unity.dt.app-ui: {fileID: 11400000, guid: 1b1c20d82303e4b5781c3ef50ac1449f, type: 2}
