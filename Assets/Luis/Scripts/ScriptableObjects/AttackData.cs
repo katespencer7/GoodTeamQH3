@@ -3,10 +3,12 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "AttackData", menuName = "Scriptable Objects/AttackData")]
 public class AttackData : ScriptableObject
 {
+    
     [Header("Attack Info")]
     public string attackName;
     public string attackDescription;
     public float baseCooldown;
+    public float forwardMovement = 1f;
 
     [Header("Animation Info")]
     public AnimationClip animationClip;

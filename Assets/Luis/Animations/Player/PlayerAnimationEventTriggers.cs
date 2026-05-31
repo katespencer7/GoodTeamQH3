@@ -30,4 +30,9 @@ public class PlayerAnimationEventTriggers : MonoBehaviour
     {
         player.OnTriggerVFX(vfxData);
     }
+
+    public void OnMoveForwardStepEvent()
+    {
+        player.OnMoveForwardStep();
+    }
 }
