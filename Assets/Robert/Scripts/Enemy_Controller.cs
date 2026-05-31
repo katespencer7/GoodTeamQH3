@@ -18,7 +18,6 @@ public class Enemy_Controller : MonoBehaviour, IDamageable
     {
         moveSpeed = enemyData.moveSpeed;
         health = enemyData.maxHealth;
-
         agent = GetComponent<NavMeshAgent>();
 
         agent.speed = enemyData.moveSpeed;
@@ -29,8 +28,9 @@ public class Enemy_Controller : MonoBehaviour, IDamageable
     // Update is called once per frame
     void Update()
     {
+        if (agent == null) { return; }
         GameObject player_reference = GameObject.FindGameObjectWithTag("Player");
-        if (player_reference == null) return;
+        if (player_reference == null) { return; }
         agent.SetDestination(player_reference.transform.position);
     }
 
