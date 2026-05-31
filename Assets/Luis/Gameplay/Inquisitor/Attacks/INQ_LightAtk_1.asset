@@ -10,6 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f1819c051c0e1b247877a13633182d2a, type: 3}
-  m_Name: INQ_LightAtk_2
+  m_Name: INQ_LightAtk_1
   m_EditorClassIdentifier: Assembly-CSharp::AttackData
-  animationClip: {fileID: 7400000, guid: f78ce1482f5ca834d927581d0e39d904, type: 2}
+  attackName: 
+  attackDescription: 
+  baseCooldown: 0
+  forwardMovement: 2
+  animationClip: {fileID: 7400000, guid: d8eb18b00e74fdf46ba7bd3a53d5c066, type: 2}
+  hitboxShape: 0
+  hitboxSize: {x: 5, y: 1, z: 1}
+  hitboxOffset: {x: 0, y: 0, z: 0}
+  hitboxRotation: {x: 0, y: 0, z: 0, w: 0}
+  hitboxDuration: 0.2

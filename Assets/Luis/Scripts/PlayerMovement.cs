@@ -18,7 +18,7 @@ public class PlayerMovement : MonoBehaviour
 
     private Vector3 currentLookDirection = Vector3.forward;
     private Vector2 moveInput;
-    [SerializeField]private bool isAttacking = false;
+    [SerializeField] private bool isAttacking = false;
     [SerializeField] private CharacterData characterData;
 
     // animations
@@ -242,11 +242,11 @@ public class PlayerMovement : MonoBehaviour
     public void OnHitboxTrigger()
     {
         HitboxUtility.Instance.CreateHitbox(
-            HitboxUtility.HitboxShape.Cube,
+            currentAttack.hitboxShape,
             transform.position + transform.forward * 1f,
-            Quaternion.identity,
-            Vector3.one,
-            1f
+            transform.rotation * currentAttack.hitboxRotation,
+            currentAttack.hitboxSize,
+            currentAttack.hitboxDuration
         );
     }
 
@@ -274,6 +274,11 @@ public class PlayerMovement : MonoBehaviour
         Debug.Log("Triggering VFX event!");
 
         VFXUtility.Instance.Play(vfxData, transform.position, transform);
+    }
+
+    public void OnMoveForwardStep()
+    {
+        rb.AddForce(currentAttack.forwardMovement * transform.forward, ForceMode.VelocityChange);
     }
 
     #endregion
