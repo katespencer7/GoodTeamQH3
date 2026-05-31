@@ -926,8 +926,8 @@ MonoBehaviour:
   - {fileID: 1823721085}
   - {fileID: 489039854}
   enemies:
-  - {fileID: 6713473882257436073, guid: c4292afdd708c3d47bffa2f36e277568, type: 3}
-  - {fileID: 2301765517715148066, guid: 6987b0d087500984db8c1a4eec178fed, type: 3}
+  - {fileID: 8353220614210745376, guid: 9c42f95fbec5bff488d6648fc378024a, type: 3}
+  - {fileID: 3925514322480864467, guid: b6f7703f166ebf34f979104fded0dd72, type: 3}
 --- !u!4 &961452299
 Transform:
   m_ObjectHideFlags: 0
@@ -3151,63 +3151,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1001 &3921625076884142751
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1793108544248884594, guid: cb6c9a1a9174d994fa78df8c50bb56f0, type: 3}
-      propertyPath: m_Name
-      value: InquisitorPrefab
-      objectReference: {fileID: 0}
-    - target: {fileID: 3088552370748202050, guid: cb6c9a1a9174d994fa78df8c50bb56f0, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3088552370748202050, guid: cb6c9a1a9174d994fa78df8c50bb56f0, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 8.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3088552370748202050, guid: cb6c9a1a9174d994fa78df8c50bb56f0, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3088552370748202050, guid: cb6c9a1a9174d994fa78df8c50bb56f0, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3088552370748202050, guid: cb6c9a1a9174d994fa78df8c50bb56f0, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3088552370748202050, guid: cb6c9a1a9174d994fa78df8c50bb56f0, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3088552370748202050, guid: cb6c9a1a9174d994fa78df8c50bb56f0, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3088552370748202050, guid: cb6c9a1a9174d994fa78df8c50bb56f0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3088552370748202050, guid: cb6c9a1a9174d994fa78df8c50bb56f0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3088552370748202050, guid: cb6c9a1a9174d994fa78df8c50bb56f0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: cb6c9a1a9174d994fa78df8c50bb56f0, type: 3}
 --- !u!1 &4179271740602924867
 GameObject:
   m_ObjectHideFlags: 0
@@ -4264,6 +4207,63 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40cbe46e98b9245c98ab1624dc6a7ec5, type: 3}
+--- !u!1001 &9042281778768516086
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7989033788539400809, guid: 45df64d448f60d54cbbdf919e481383f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7989033788539400809, guid: 45df64d448f60d54cbbdf919e481383f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 8.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7989033788539400809, guid: 45df64d448f60d54cbbdf919e481383f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7989033788539400809, guid: 45df64d448f60d54cbbdf919e481383f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7989033788539400809, guid: 45df64d448f60d54cbbdf919e481383f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7989033788539400809, guid: 45df64d448f60d54cbbdf919e481383f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7989033788539400809, guid: 45df64d448f60d54cbbdf919e481383f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7989033788539400809, guid: 45df64d448f60d54cbbdf919e481383f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7989033788539400809, guid: 45df64d448f60d54cbbdf919e481383f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7989033788539400809, guid: 45df64d448f60d54cbbdf919e481383f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8537483980925076542, guid: 45df64d448f60d54cbbdf919e481383f, type: 3}
+      propertyPath: m_Name
+      value: InquisitorPrefab
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 45df64d448f60d54cbbdf919e481383f, type: 3}
 --- !u!1 &9076105744412507639
 GameObject:
   m_ObjectHideFlags: 0
@@ -4306,7 +4306,7 @@ SceneRoots:
   - {fileID: 961452299}
   - {fileID: 353314426}
   - {fileID: 9019891879651524320}
-  - {fileID: 3921625076884142751}
+  - {fileID: 9042281778768516086}
   - {fileID: 934029997}
   - {fileID: 1337272228}
   - {fileID: 1086241746}

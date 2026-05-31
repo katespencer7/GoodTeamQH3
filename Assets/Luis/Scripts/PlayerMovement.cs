@@ -217,7 +217,7 @@ public class PlayerMovement : MonoBehaviour
         // Zero out Y so the dash never has a vertical component.
         dashDirection.y = 0f;
 
-        rb.AddForce(dashDirection.normalized * moveSpeed * 10f, ForceMode.Impulse);
+        rb.AddForce(dashDirection.normalized * moveSpeed * 15f, ForceMode.Impulse);
     }
 
     // Returns only the Y-axis (yaw) component of the camera's rotation,

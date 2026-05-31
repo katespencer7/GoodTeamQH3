@@ -18,7 +18,7 @@ MonoBehaviour:
   forwardMovement: 2
   animationClip: {fileID: 7400000, guid: d8eb18b00e74fdf46ba7bd3a53d5c066, type: 2}
   hitboxShape: 0
-  hitboxSize: {x: 5, y: 1, z: 1}
+  hitboxSize: {x: 2, y: 2, z: 2}
   hitboxOffset: {x: 0, y: 0, z: 0}
   hitboxRotation: {x: 0, y: 0, z: 0, w: 0}
   hitboxDuration: 0.2
