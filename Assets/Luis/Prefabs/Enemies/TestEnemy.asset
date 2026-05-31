@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dbd340b1915fd44995d4ccd515a20e3, type: 3}
   m_Name: TestEnemy
   m_EditorClassIdentifier: Assembly-CSharp::EnemyData
-  enemyName: 
+  enemyName: Dummy
   enemyDescription: 
   enemySprite: {fileID: 0}
-  maxHealth: 0
+  maxHealth: 20
   currentHealth: 0
-  moveSpeed: 0
+  moveSpeed: 4

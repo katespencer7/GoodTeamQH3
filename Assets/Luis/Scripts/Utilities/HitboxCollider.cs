@@ -31,8 +31,8 @@ public class HitboxCollider : MonoBehaviour
     {
         Debug.Log($"[HitboxCollider] {owner} hit {target.name} for {damage} damage.");
 
-        // Uncomment once you have a health component:
-        // target.GetComponent<HealthComponent>()?.TakeDamage(damage);
+        if (target.TryGetComponent(out IDamageable damageable))
+            damageable.TakeDamage(damage);
     }
 
     // Called by HitboxUtility when spawning so it doesn't need

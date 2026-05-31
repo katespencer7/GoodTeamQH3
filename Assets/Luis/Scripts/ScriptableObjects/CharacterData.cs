@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "CharacterData", menuName = "Scriptable Objects/CharacterData")]
@@ -10,10 +11,10 @@ public class CharacterData : ScriptableObject
     public int max_health;
     
     [Header("Light Attacks")]
-    public AttackData attackData1;
+    public List<AttackData> lightAttacks;
 
     [Header("Heavy Attacks")]
-    public AttackData attackData2;
+    public List<AttackData> heavyAttacks;
 
     [Header("Skills")]
     public AttackData skillData1;
