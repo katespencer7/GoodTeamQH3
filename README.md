@@ -1,0 +1,3 @@
+# Carcosa
+
+### Carcosa is an occult-themed, horde-survival, isometric 2.5D video game, inspired by games like Hades and Risk of Rain 2. The game consists of three playable characters: the Assassin, the Inquisitor, and the Countess. The player spawns at the Lost Ruins, where they fight two enemies: the ghost and the skeleton. The gameplay is arena-style, with each round starting when enemies spawn across the map and ending when the player kills all attackers. Each round, the number of enemies increases by 1.5 times. The goal of the game: live as long as you can! Title pages, 3D character models and designs, music, and level textures were all hand-made by our team.
