@@ -16,5 +16,9 @@ MonoBehaviour:
   max_health: 0
   lightAttacks:
   - {fileID: 11400000, guid: 9b17d64306db19e48b0d4d5839ef48bb, type: 2}
+  - {fileID: 11400000, guid: 943deb122f350e847a7524cda5ceb184, type: 2}
   heavyAttacks: []
-  skillData1: {fileID: 0}
+  skillData1: {fileID: 11400000, guid: 6fd5d29a0175bb54286e04ede69e4d9a, type: 2}
+  skillData2: {fileID: 11400000, guid: 895953e70ff0dd04ab320a0a845467d7, type: 2}
+  skillData3: {fileID: 11400000, guid: d989b3ce356260342b4c155ca963d651, type: 2}
+  skillData4: {fileID: 11400000, guid: 80a514e1b265f84428090049ab71a574, type: 2}

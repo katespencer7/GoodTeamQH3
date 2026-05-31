@@ -16,8 +16,18 @@ public class PlayerAnimationEventTriggers : MonoBehaviour
         player.OnHitboxTrigger();
     }
 
+    public void OnAttackAnimationBeginEvent()
+    {
+        player.OnAttackAnimationBegin();
+    }
+
     public void OnAttackAnimationEndedEvent()
     {
         player.OnAttackAnimationEnded();
+    }
+
+    public void OnTriggerVFXEvent(VFXData vfxData)
+    {
+        player.OnTriggerVFX(vfxData);
     }
 }
