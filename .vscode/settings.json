@@ -67,6 +67,6 @@
         "*.sln": "*.csproj",
         "*.slnx": "*.csproj"
     },
-    "dotnet.defaultSolution": "GoodTeamQH3.slnx",
+    "dotnet.defaultSolution": "GoodTeamGame.slnx",
     "dotnet.enableWorkspaceBasedDevelopment": false
 }

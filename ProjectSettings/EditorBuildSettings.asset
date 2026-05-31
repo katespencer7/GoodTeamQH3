@@ -14,6 +14,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/KateScenes/Credits.unity
     guid: a838d933ceca14e6bb7af0abc753ac52
+  - enabled: 1
+    path: Assets/Scenes/KateScenes/RuinsLevel.unity
+    guid: 83efb65f3d1264c87a6407053ea057cb
   m_configObjects:
     com.unity.dt.app-ui: {fileID: 11400000, guid: 1b1c20d82303e4b5781c3ef50ac1449f, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: c73942a025a709745aee7679f244c4d2, type: 3}

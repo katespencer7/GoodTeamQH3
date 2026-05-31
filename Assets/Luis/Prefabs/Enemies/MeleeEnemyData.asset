@@ -10,11 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7dbd340b1915fd44995d4ccd515a20e3, type: 3}
-  m_Name: TestEnemy
+  m_Name: MeleeEnemyData
   m_EditorClassIdentifier: Assembly-CSharp::EnemyData
   enemyName: Dummy
   enemyDescription: 
   enemySprite: {fileID: 0}
+  Attack: {fileID: 11400000, guid: c87fcfa8ac7bf8847b72523a5ca4aa88, type: 2}
+  attackRange: 5
   maxHealth: 20
   currentHealth: 0
-  moveSpeed: 4
+  moveSpeed: 6

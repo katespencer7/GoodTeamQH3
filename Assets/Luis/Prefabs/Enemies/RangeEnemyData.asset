@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7dbd340b1915fd44995d4ccd515a20e3, type: 3}
+  m_Name: RangeEnemyData
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyData
+  enemyName: Dummy
+  enemyDescription: 
+  enemySprite: {fileID: 0}
+  Attack: {fileID: 11400000, guid: c87fcfa8ac7bf8847b72523a5ca4aa88, type: 2}
+  attackRange: 20
+  maxHealth: 10
+  currentHealth: 0
+  moveSpeed: 4

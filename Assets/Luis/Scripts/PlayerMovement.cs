@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(Rigidbody))]
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovement : MonoBehaviour, IDamageable
 {
     [Header("Movement")]
     [SerializeField] private float moveSpeed = 5f;
@@ -27,6 +27,7 @@ public class PlayerMovement : MonoBehaviour
     //combat
     [SerializeField] private int maxLightAttackChain;
     [SerializeField] private int currentLightAttackChain = 0;
+    [SerializeField] private float currentHealth = 0;
     private AttackData currentAttack;
 
     // Tracks which device was used most recently.
@@ -52,6 +53,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (isoCamera == null)
             Debug.LogWarning("PlayerMovement: Could not find a camera.");
+        currentHealth = characterData.max_health;
     }
 
     private void OnEnable()
@@ -83,7 +85,7 @@ public class PlayerMovement : MonoBehaviour
         moveInput = input.Player.Movement.ReadValue<Vector2>();
         //DetectActiveDevice();
         UpdateLookDirection();
-        HUDUtility.Instance.RetrievePlayerStats(characterData);
+        // HUDUtility.Instance.RetrievePlayerStats(characterData);
     }
     
 
@@ -217,7 +219,7 @@ public class PlayerMovement : MonoBehaviour
         // Zero out Y so the dash never has a vertical component.
         dashDirection.y = 0f;
 
-        rb.AddForce(dashDirection.normalized * moveSpeed * 15f, ForceMode.Impulse);
+        rb.AddForce(dashDirection.normalized * moveSpeed * 25f, ForceMode.Impulse);
     }
 
     // Returns only the Y-axis (yaw) component of the camera's rotation,
@@ -283,6 +285,11 @@ public class PlayerMovement : MonoBehaviour
 
     #endregion
 
+    public void TakeDamage(float damage)
+    {
+        currentHealth -= damage;
+        Debug.Log($"Player took {damage}");
+    }
 
     #region Deprecated
 

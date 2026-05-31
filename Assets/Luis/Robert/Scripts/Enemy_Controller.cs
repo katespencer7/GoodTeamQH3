@@ -14,6 +14,11 @@ public class Enemy_Controller : MonoBehaviour, IDamageable
     [Header("Rotation")]
     [SerializeField] private float rotationSpeed = 8f;
 
+    [SerializeField] private Animator animator;
+    [SerializeField] private Rigidbody rb;
+    private AttackData attackData;
+    private bool isAttacking = false;
+
     void Start()
     {
         moveSpeed = enemyData.moveSpeed;
@@ -43,6 +48,16 @@ public class Enemy_Controller : MonoBehaviour, IDamageable
 
         agent.SetDestination(playerTransform.position);
         FacePlayer();
+
+        if (enemyData != null && !isAttacking)
+        {
+            float distanceToPlayer = Vector3.Distance(gameObject.transform.position, playerTransform.position);
+            if (distanceToPlayer <= enemyData.attackRange)
+            {
+                Debug.Log("Enemy is in range to attack!");
+                handleAttack();
+            }
+        }
     }
 
     private void FacePlayer()
@@ -54,6 +69,20 @@ public class Enemy_Controller : MonoBehaviour, IDamageable
 
         Quaternion targetRotation = Quaternion.LookRotation(direction);
         transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * rotationSpeed);
+    }
+
+    public void handleAttack()
+    {
+       
+         if (isAttacking)
+            return;
+        Debug.Log("Enemy is attacking!");
+        isAttacking = true;        
+        // Play the current attack animation
+        attackData = enemyData.Attack;
+        int animHash = Animator.StringToHash(attackData.animationClip.name);
+        animator.CrossFadeInFixedTime(animHash, 0.1f);
+
     }
 
     public void HandleDeath()
@@ -70,4 +99,44 @@ public class Enemy_Controller : MonoBehaviour, IDamageable
         if (health <= 0)
             HandleDeath();
     }
+
+
+    public void OnHitboxTrigger()
+    {
+        HitboxUtility.Instance.CreateHitbox(
+            attackData.hitboxShape,
+            transform.position + transform.forward * 1f,
+            transform.rotation * attackData.hitboxRotation,
+            attackData.hitboxSize,
+            attackData.hitboxDuration
+        );
+    }
+
+        //     HitboxUtility.Instance.CreateHitbox(
+        //     currentAttack.hitboxShape,
+        //     currentAttack.hitboxOffset + transform.position,
+        //     currentAttack.hitboxRotation,
+        //     currentAttack.hitboxSize,
+        //     currentAttack.hitboxDuration
+        // );
+
+    public void OnAttackAnimationEnded()
+    {
+        isAttacking = false;
+    }
+
+    public void OnAttackAnimationBegin()
+    {
+        isAttacking = true;
+    }
+
+    public void OnTriggerVFX(VFXData vfxData)
+    {
+        // Placeholder for triggering VFX via animation events.
+        Debug.Log("Triggering VFX event!");
+
+        VFXUtility.Instance.Play(vfxData, transform.position, transform);
+    }
+
+
 }

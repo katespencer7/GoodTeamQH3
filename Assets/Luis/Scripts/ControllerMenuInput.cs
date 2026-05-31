@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ControllerMenuInput : MonoBehaviour
 {
@@ -47,6 +48,7 @@ public class ControllerMenuInput : MonoBehaviour
         {
             Debug.Log("South pressed — clicking: " + buttons[currentIndex].name);
             ClickButton(currentIndex);
+            //GamestateManager.Instance.StartGameAs(buttons[currentIndex].name);
         }
     }
 

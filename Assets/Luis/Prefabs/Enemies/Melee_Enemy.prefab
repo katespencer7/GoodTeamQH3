@@ -1201,6 +1201,7 @@ GameObject:
   - component: {fileID: 7056761265350040713}
   - component: {fileID: 1865114255491378660}
   - component: {fileID: 1667235902202232722}
+  - component: {fileID: 2252535317171746868}
   m_Layer: 0
   m_Name: Melee_Enemy
   m_TagString: Enemy
@@ -1263,6 +1264,8 @@ MonoBehaviour:
   health: 0
   moveSpeed: 0
   rotationSpeed: 8
+  animator: {fileID: 2252535317171746868}
+  rb: {fileID: 1865114255491378660}
 --- !u!54 &1865114255491378660
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1313,6 +1316,28 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!95 &2252535317171746868
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8353220614210745376}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 5f9ece00d7aef7942b28564c2ce7587c, type: 3}
+  m_Controller: {fileID: 9100000, guid: 91aec97dc25510945ba163f33c0c7a59, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &8535967799248574569
 GameObject:
   m_ObjectHideFlags: 0
