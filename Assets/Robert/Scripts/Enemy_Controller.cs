@@ -4,6 +4,8 @@ public class Enemy_Controller : MonoBehaviour
 {
 
     [Header ("Enemy Stats")]
+    [SerializeField] private EnemyData enemyData;
+
     [SerializeField] private int health = 100;
     [SerializeField] private int damage = 10;
     [SerializeField] private float move_speed = 3f;
@@ -15,6 +17,8 @@ public class Enemy_Controller : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        enemyData = new EnemyData();
+
         agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
         agent.speed = move_speed;
         agent.stoppingDistance = attack_range;

@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: feb9a328ca7f6b547b17050be1ca4e51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HitboxUtility
-  DebugMode: 1
+  debugMode: 0
   cubeHitboxPrefab: {fileID: 6938071885013519541, guid: bad96f8d3a1ff214989680445f59da2f, type: 3}
 --- !u!114 &7194621517392198902
 MonoBehaviour:
