@@ -1271,7 +1271,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 176891289}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 675155431}
+        m_TargetAssemblyTypeName: MainMenuManager, Assembly-CSharp
+        m_MethodName: LoadMainMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &176891289
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2096,8 +2108,8 @@ MonoBehaviour:
   m_XRTrackingOrigin: {fileID: 0}
   m_ActionsAsset: {fileID: -944628639613478452, guid: c73942a025a709745aee7679f244c4d2, type: 3}
   m_PointAction: {fileID: 0}
-  m_MoveAction: {fileID: 0}
-  m_SubmitAction: {fileID: -1639235556289924889, guid: c73942a025a709745aee7679f244c4d2, type: 3}
+  m_MoveAction: {fileID: -1639235556289924889, guid: c73942a025a709745aee7679f244c4d2, type: 3}
+  m_SubmitAction: {fileID: -5575620776963599880, guid: c73942a025a709745aee7679f244c4d2, type: 3}
   m_CancelAction: {fileID: 0}
   m_LeftClickAction: {fileID: 0}
   m_MiddleClickAction: {fileID: 0}
@@ -2637,6 +2649,7 @@ GameObject:
   m_Component:
   - component: {fileID: 675155430}
   - component: {fileID: 675155431}
+  - component: {fileID: 675155432}
   m_Layer: 0
   m_Name: MainMenuManager
   m_TagString: Untagged
@@ -2678,6 +2691,22 @@ MonoBehaviour:
   CountessPortrait: {fileID: 707705970271847517}
   AssassinPortrait: {fileID: 7522177224800665992}
   fadeDuration: 0.3
+--- !u!114 &675155432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 675155429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7184a31485b7cf47aaa756aa86be85f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ControllerMenuInput
+  buttons:
+  - {fileID: 1957347583}
+  - {fileID: 1166271752}
+  - {fileID: 176891282}
 --- !u!1 &698990140
 GameObject:
   m_ObjectHideFlags: 0
@@ -4506,7 +4535,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1166271755}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 675155431}
+        m_TargetAssemblyTypeName: MainMenuManager, Assembly-CSharp
+        m_MethodName: LoadCharacterSelect
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1166271755
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5291,7 +5332,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1398954297
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6782,7 +6823,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 655.48, y: -187}
+  m_AnchoredPosition: {x: 639, y: -94}
   m_SizeDelta: {x: 227.5138, y: 111.5917}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1957347585
@@ -6828,7 +6869,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1957347586}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 675155431}
+        m_TargetAssemblyTypeName: MainMenuManager, Assembly-CSharp
+        m_MethodName: LoadCredits
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1957347586
 MonoBehaviour:
   m_ObjectHideFlags: 0
