@@ -2954,7 +2954,7 @@ GameObject:
   - component: {fileID: 2072977570}
   - component: {fileID: 2072977569}
   m_Layer: 5
-  m_Name: Assasin
+  m_Name: Asassin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
