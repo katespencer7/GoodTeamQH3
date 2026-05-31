@@ -18,5 +18,8 @@ public class CharacterData : ScriptableObject
 
     [Header("Skills")]
     public AttackData skillData1;
+    public AttackData skillData2;
+    public AttackData skillData3;
+    public AttackData skillData4;
 
 }

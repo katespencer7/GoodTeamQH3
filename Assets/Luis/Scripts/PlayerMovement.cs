@@ -60,6 +60,10 @@ public class PlayerMovement : MonoBehaviour
         input.Player.Dash.performed += ctx => HandleDash();
         input.Player.LightAttack.performed += ctx => HandleLightAttack();
         input.Player.HeavyAttack.performed += ctx => HandleHeavyAttack();
+        input.Player.Skill1.performed += ctx => HandleSkill(characterData.skillData1);
+        input.Player.Skill2.performed += ctx => HandleSkill(characterData.skillData2);
+        input.Player.Skill3.performed += ctx => HandleSkill(characterData.skillData3);
+        input.Player.Skill4.performed += ctx => HandleSkill(characterData.skillData4);
     }
     private void OnDisable()
     {
@@ -67,6 +71,10 @@ public class PlayerMovement : MonoBehaviour
         input.Player.Dash.performed -= ctx => HandleDash();
         input.Player.LightAttack.performed -= ctx => HandleLightAttack();
         input.Player.HeavyAttack.performed -= ctx => HandleHeavyAttack();
+        input.Player.Skill1.performed -= ctx => HandleSkill(characterData.skillData1);
+        input.Player.Skill2.performed -= ctx => HandleSkill(characterData.skillData2);
+        input.Player.Skill3.performed -= ctx => HandleSkill(characterData.skillData3);
+        input.Player.Skill4.performed -= ctx => HandleSkill(characterData.skillData4);
     }
 
     private void Update()
@@ -75,6 +83,7 @@ public class PlayerMovement : MonoBehaviour
         moveInput = input.Player.Movement.ReadValue<Vector2>();
         //DetectActiveDevice();
         UpdateLookDirection();
+        HUDUtility.Instance.RetrievePlayerStats(characterData);
     }
     
 
@@ -111,7 +120,6 @@ public class PlayerMovement : MonoBehaviour
         if (isAttacking)
             return;
 
-        isAttacking = true;
         currentAttack = characterData.lightAttacks[currentLightAttackChain];
         
         // Play the current attack animation
@@ -123,6 +131,28 @@ public class PlayerMovement : MonoBehaviour
     }
 
     private void HandleHeavyAttack(){}
+
+    private void HandleSkill(AttackData skillData)
+    {
+        
+        if(isAttacking)
+            return;
+
+        if(!skillData.TryUse())
+        {
+            Debug.Log($"Skill {skillData.attackName} is on cooldown. {skillData.CooldownRemaining:F1}s remaining.");
+            return;
+        }
+
+        //isAttacking = true;
+        currentAttack = skillData;
+
+        Debug.Log($"Attempting to use skill: {skillData.attackName}");
+
+        int animHash = Animator.StringToHash(skillData.animationClip.name);
+        animator.CrossFadeInFixedTime(animHash, 0.1f);
+
+    }
 
     private void UpdateLookDirection()
     {
@@ -176,6 +206,10 @@ public class PlayerMovement : MonoBehaviour
         {
             // Convert the 2D stick input into a camera-relative world direction,
             // matching exactly how HandleMovement works.
+            
+            animator.SetTrigger("Dash");
+
+            
             dashDirection = GetCameraYaw() * new Vector3(moveInput.x, 0f, moveInput.y);
             dashDirection = Vector3.ClampMagnitude(dashDirection, 1f);
         }
@@ -183,7 +217,7 @@ public class PlayerMovement : MonoBehaviour
         // Zero out Y so the dash never has a vertical component.
         dashDirection.y = 0f;
 
-        rb.AddForce(dashDirection.normalized * moveSpeed * 5f, ForceMode.VelocityChange);
+        rb.AddForce(dashDirection.normalized * moveSpeed * 10f, ForceMode.Impulse);
     }
 
     // Returns only the Y-axis (yaw) component of the camera's rotation,
@@ -229,6 +263,18 @@ public class PlayerMovement : MonoBehaviour
         isAttacking = false;
     }
 
+    public void OnAttackAnimationBegin()
+    {
+        isAttacking = true;
+    }
+
+    public void OnTriggerVFX(VFXData vfxData)
+    {
+        // Placeholder for triggering VFX via animation events.
+        Debug.Log("Triggering VFX event!");
+
+        VFXUtility.Instance.Play(vfxData, transform.position, transform);
+    }
 
     #endregion
 
